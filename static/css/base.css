@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    background-color: #fff;
+}
+
+/* generic */
+a:hover {
+    text-decoration: none;
+}
+
+/* header */
+.top-header {
+    background: #b7b7b7;
+    align-items: center;
+}
+
+.bg-black {
+    background: #000;
+}
+
+.header-top-text {
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+}
+
+.header-hover {
+    color: #000;
+    transition: all .5s;
+}
+
+.header-hover:hover {
+    color: #177BD1;
+}
+
+.search-input {
+    border: 2px solid #177BD1;
+    border-radius: 25px;
+    background: #000;
+    color: #fff;
+}
+
+.form-control:focus {
+    color: #fff;
+    background-color: #000;
+    border-color: #177BD1;
+    box-shadow: none;
+}
+
+.form-control .qicon i:hover {
+    color: #177BD1;
+}
+
+.basket-icon {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-links {
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+
+.nav-links:hover {
+    color: #177BD1 !important;
+}
+
+.cart {
+    transition: all .5s;
+}
+
+.cart:hover {
+    color: #177BD1 !important;
+}
