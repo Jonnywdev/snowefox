@@ -1,0 +1,39 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+
+        <li class="list-inline-item py-2"><a href="{% url 'home' %}" class="text-white text-uppercase nav-links">Home</a></li>
+
+        <li class="list-inline-item py-2"><a href="#" class="text-white text-uppercase nav-links">Clubs</a></li>
+
+        <li class="list-inline-item py-2 dropdown">
+            <a class="text-white text-uppercase nav-links" href="#" id="all-accesories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Accessories
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-accesories-link">
+                <a href="" class="dropdown-item">Rugby</a>
+                <a href="" class="dropdown-item ">Football</a>
+                <a href="" class="dropdown-item ">Gym</a>
+                <a href="" class="dropdown-item">All Accessories</a>
+            </div>
+        </li>
+
+        <li class="list-inline-item py-2">
+            <a href="#" class="text-white text-uppercase nav-links">
+                About Us
+            </a>
+        </li>
+
+        <li class="list-inline-item py-2 d-lg-none">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a href="" class="text-uppercase text-white header-hover">Dashboard</a>
+                {% endif %}
+                <a href="{% url 'account_logout' %}" class="text-uppercase text-white header-hover">Logout</a>
+            {% else %}
+                <a href="{% url 'account_login' %}" class="text-uppercase text-white header-hover">Login</a> / <a href="{% url 'account_signup' %}" class="text-uppercase text-white  header-hover">register</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
+

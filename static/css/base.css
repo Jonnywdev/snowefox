@@ -28,6 +28,10 @@ a:hover {
     font-size: 0.8rem;
 }
 
+.logo {
+    width: 70%;
+}
+
 .header-hover {
     color: #000;
     transition: all .5s;
@@ -75,4 +79,85 @@ a:hover {
 
 .cart:hover {
     color: #177BD1 !important;
+}
+
+.dropdown-item {
+    transition: all .5s;
+}
+
+.dropdown-item:hover {
+    background: #b7b7b7;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+}
+
+.mobile-top-head ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-m-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-logo {
+    text-align: center;
+}
+/* hero image */
+.blue-btn {
+    background-color: #62c5e6;
+}
+
+.hero-container {
+    padding: 3rem 1rem;
+}
+
+.hero {
+    background: url('/media/hero-img.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* media queries */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+@media (max-width:991px) {
+    .hero-container {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .logo {
+        width: 75%;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        width: 100%;
+    }
 }
