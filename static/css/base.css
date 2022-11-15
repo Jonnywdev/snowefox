@@ -12,6 +12,21 @@ a:hover {
     text-decoration: none;
 }
 
+.generic-header {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+
 /* header */
 .top-header {
     background: #b7b7b7;
@@ -119,6 +134,21 @@ a:hover {
 .hero {
     background: url('/media/hero-img.png') no-repeat center center fixed;
     background-size: cover;
+}
+
+/* all clubs page */
+
+.card {
+    transition: all .5s;
+    background: #eee !important;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.card-body {
+    padding: 0 !important;
 }
 
 
