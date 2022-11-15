@@ -151,6 +151,20 @@ a:hover {
     padding: 0 !important;
 }
 
+/* sign up pages */
+.signup-pages {
+    margin-top: 13rem;
+}
+
+.signup-card {
+    width: 60%;
+}
+
+.e-center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 /* media queries */
 
@@ -172,11 +186,20 @@ a:hover {
     .header-container {
         padding-top: 164px;
     }
+
 }
 
 @media (max-width:991px) {
     .hero-container {
         margin-top: 5rem;
+    }
+
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
 
