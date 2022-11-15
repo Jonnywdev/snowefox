@@ -46,7 +46,7 @@
           <div class="col-sm text-right">
             {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-                <a href="" class="text-uppercase header-top-text header-hover">Dashboard</a>
+                <a href="" class="text-uppercase header-top-text header-hover">Dashboard /</a>
               {% endif %}
               <a href="{% url 'account_logout' %}" class="text-uppercase header-top-text header-hover">Logout</a>
             {% else %}
