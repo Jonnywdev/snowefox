@@ -16,7 +16,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="generic-header">All Clubs</h2>
+                <h2 class="generic-header">All Products</h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
@@ -32,15 +32,16 @@
                                 <div class="card h-100 border-0">
                                     {% if product.image %}
                                     <a href="">
-                                        <img src="{{ product.image.url }}" alt="{{ product.name }} logo" class="card-img-top img-fluid">
+                                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                                     </a>
                                     {% else %}
                                     <a href="">
-                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }} logo" class="card-img-top img-fluid">
+                                        <img src="{{ MEDIA_URL }} noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
                                     </a>
                                     {% endif %}
                                     <div class="card-body pb-0">
-                                        <p class="mb-0 text-uppercase"><b>{{ product.friendly_name }}</b></p>
+                                        <p class="mb-0">Club: {{ product.club }}</p>
+                                        <p class="mb-0"><b>{{ product.name }}</b></p>
                                     </div>
                                     <div class="card-footer pb-2">
                                         <div class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</div>
