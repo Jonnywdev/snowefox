@@ -1,6 +1,6 @@
 <div class="mobile-logo d-lg-none">
     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-        <img class="logo" src="https://res.cloudinary.com/dmegr1g6f/image/upload/v1668532097/logo_pxradv.png" alt="">
+        <img class="logo" src="https://res.cloudinary.com/dmegr1g6f/image/upload/v1668532097/logo_pxradv.png products = Products.objects.all()" alt="">
     </a>
 </div>
 
@@ -14,7 +14,7 @@
                 </div>
             </a>
             <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-                <form class="form" method="GET" action="">
+                <form class="form" method="GET" action="{% url 'clubs' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search for a Club">
                         <div class="input-group-append">

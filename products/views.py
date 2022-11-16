@@ -1,27 +1,29 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Club
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
+from .models import Product
 # Create your views here.
 
 
-def all_clubs(request):
-    """ A view to show all clubs, including sorting and searching """
+def all_products(request):
+    """ A view to show all products, including sorting and searching """
 
-    clubs = Club.objects.all()
+    products = Product.objects.all()
+    query = None
 
-    context = { 
-        'clubs': clubs,
-    }
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.Get['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('products'))
 
-    return render(request, 'clubs/clubs.html', context)
-
-
-def club_detail(request, club_id):
-    """ A view to show a clubs page """
-
-    club = get_object_or_404(Club, pk=club_id)
+            queries = Q(name_icontains=query)
+            products = products.filter(queries)
 
     context = {
-        'club': club,
+        'products': products,
+        'search_term': query,
     }
 
-    return render(request, 'clubs/club_detail.html', context)
+    return render(request, 'products/all_products.html', context)

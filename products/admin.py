@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, Club
+from .models import Product, Category
 
 # Register your models here.
 
@@ -23,14 +23,5 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-class ClubAdmin(admin.ModelAdmin):
-    list_display = (
-        'friendly_name',
-        'name',
-        'sport',
-    )
-
-
-admin.site.register(Club, ClubAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
