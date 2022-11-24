@@ -5,7 +5,7 @@ from .models import Club
 
 
 def all_clubs(request):
-    """ A view to show all clubs, including sorting and searching """
+    """ A view to show all clubs"""
 
     clubs = Club.objects.all()
 
@@ -26,3 +26,5 @@ def club_detail(request, club_id):
     }
 
     return render(request, 'clubs/club_detail.html', context)
+
+

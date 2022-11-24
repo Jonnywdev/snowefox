@@ -12,9 +12,9 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container-fluid page-wrapped">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="club-title-wrapped">
                 <div class="club-container">
                     {% if club.image %}
                         <a href="{{ club.image.url }}" target="_blank">
@@ -27,12 +27,57 @@
                     {% endif %}
                     <h1>{{ club.friendly_name }}</h1>
                 </div>
+                <hr>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                     <!-- filters -->
                 </div>
                 
+            </div>
+            <div class="row jc-center">
+                {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 card-deck text-center">
+                        <div class="card h-100 border-0">
+                            {% if product.image %}
+                            <a href="">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img src="{{ MEDIA_URL }} noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                            </a>
+                            {% endif %}
+                            <div class="card-body pb-0">
+                                <p class="mb-0">Club: {{ product.club.friendly_name }}</p>
+                                <p class="mb-0"><b>{{ product.name }}</b></p>
+                            </div>
+                            <div class="card-footer pb-2">
+                                <div class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-sm-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif %}
+                    {% if forloop.counter|divisibleby:2 %}
+                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif%}
+                    {% if forloop.counter|divisibleby:3 %}
+                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <hr>
+                        </div>
+                    {% endif%}
+                    {% if forloop.counter|divisibleby:4 %}
+                        <div class="col-12 d-none d-xl-block mb-5">
+                            <hr>
+                        </div>
+                    {% endif%}
+                {% endfor %}
             </div>
         </div>
     </div>

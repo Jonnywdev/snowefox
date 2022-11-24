@@ -166,6 +166,37 @@ a:hover {
     text-align: center;
 }
 
+/* club detail */
+.page-wrapped {
+    padding: 2rem 5rem;
+}
+
+.club-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.club-container a {
+    max-width: 60px;
+}
+
+.club-container a img {
+    width: 100%;
+}
+
+.club-container h1 {
+    margin-left: 2rem;
+}
+
+.club-title-wrapped {
+    width: 100%;
+}
+
+.club-title-wrapped hr{
+    border-top: 2px solid #000;
+}
+
 /* media queries */
 
 @media (min-width: 1200px) {
