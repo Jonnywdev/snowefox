@@ -10,6 +10,7 @@ body {
 /* generic */
 a:hover {
     text-decoration: none;
+    color: #fff;
 }
 
 .generic-header {
@@ -138,9 +139,16 @@ a:hover {
 
 /* all clubs page */
 
+.card-bot {
+    margin-bottom: 3rem;
+}
+
 .card {
     transition: all .5s;
     background: #eee !important;
+    padding: 30px 5px;
+    border: 2px solid black;
+    border-radius: 0;
 }
 
 .card:hover {
@@ -149,6 +157,22 @@ a:hover {
 
 .card-body {
     padding: 0 !important;
+}
+
+.allauth-blue-btn {
+    border: none;
+    background: #177BD1;
+    color: #fff;
+    padding: 5px 20px;
+    margin-top: 15px;
+}
+
+.allauth-grey-btn {
+    border: none;
+    background: #177BD1;
+    color: #fff;
+    padding: 5px 20px;
+    margin-top: 15px;
 }
 
 /* sign up pages */
