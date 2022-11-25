@@ -10,10 +10,12 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Tops</a>
-                <a href="" class="dropdown-item ">Pants</a>
-                <a href="" class="dropdown-item ">Shorts</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a>
+                <a href="{% url 'products' %}?category=pants" class="dropdown-item ">Pants</a>
+                <a href="{% url 'products' %}?category=shorts" class="dropdown-item ">Shorts</a>
+                <a href="{% url 'products' %}?category=jumper_coats" class="dropdown-item ">Jumpers & Coats</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item ">Accessories</a>
+                <a href="{% url 'products' %}?category=tops,pants,shorts,jumper_coats,accessories" class="dropdown-item">All Products</a>
             </div>
         </li>
 
