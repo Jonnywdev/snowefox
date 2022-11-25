@@ -26,6 +26,13 @@
                         </a>
                     {% endif %}
                     <h1>{{ product.name }}</h1>
+                    {% if product.category %}
+                    <p class="small mt-1 mb-0">
+                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                 </div>
             </div>
             <div class="row">
